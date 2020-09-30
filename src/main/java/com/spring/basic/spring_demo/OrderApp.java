@@ -3,15 +3,17 @@ package com.spring.basic.spring_demo;
 import com.spring.basic.spring_demo.member.Grade;
 import com.spring.basic.spring_demo.member.Member;
 import com.spring.basic.spring_demo.member.MemberService;
-import com.spring.basic.spring_demo.member.MemberServiceImpl;
 import com.spring.basic.spring_demo.order.Order;
 import com.spring.basic.spring_demo.order.OrderService;
-import com.spring.basic.spring_demo.order.OrderServiceImpl;
 
 public class OrderApp {
     public static void main(String[] args) {
-        MemberService memberService = new MemberServiceImpl();
-        OrderService orderService = new OrderServiceImpl();
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
+        OrderService orderService = appConfig.orderService();
+
+//        MemberService memberService = new MemberServiceImpl(null);
+//        OrderService orderService = new OrderServiceImpl(null, null);
 
         Long memberId = 1L;
         Member member = new Member(memberId, "memberA", Grade.VIP);
