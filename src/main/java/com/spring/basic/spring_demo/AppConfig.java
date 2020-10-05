@@ -11,7 +11,7 @@ import com.spring.basic.spring_demo.order.OrderServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+@Configuration // 이 Annotaion을 하지 않을 경우 CGLIB를 사용하지 않아, 싱글톤을 보장하지 않는다.
 public class AppConfig {
 
     @Bean
