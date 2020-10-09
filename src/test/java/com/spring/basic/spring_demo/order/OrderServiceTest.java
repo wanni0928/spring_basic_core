@@ -32,4 +32,11 @@ public class OrderServiceTest {
         // then
         Assertions.assertEquals(1000, order.getDiscountPrice());
     }
+
+
+//    @Test
+//    void fieldInjectionTest() {
+//        OrderService orderService = new OrderServiceImpl();
+//
+//    }
 }

@@ -10,4 +10,11 @@ import org.springframework.context.annotation.FilterType;
 //        basePackageClasses = AppConfig.class,
         excludeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = Configuration.class) // AppConfig.java 를 걸러낸다.
 ) // @Component 에노테이션이 선언된 빈들을 스캔해서 자동으로 등록시켜준다.
-public class AutoAppConfig { }
+public class AutoAppConfig {
+
+//
+//    @Bean(name = "memoryMemberRepository")
+//    MemberRepository memberRepository() {
+//        return new MemoryMemberRepository();
+//    }
+}
